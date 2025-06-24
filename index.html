@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitIndex Pro by บังอาร์ม</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="https://img.lovepik.com/png/20231111/boxing-clipart-cartoon-character-cartoon-character-cartoon-boxer-vector-characters_560419_wh1200.png" alt="Boxing Cartoon" class="bmi-icon">
+        <h1>FitIndex Pro by บังอาร์ม</h1>
+        <nav>
+            <a href="index.html">คำนวณกายภาพบำบัด</a>
+        </nav>
+    </header>
+    <main>
+        <div id="desc">ดัชนีมวลกาย (BMI) คือ ตัวชี้วัดสุขภาพที่ใช้ประเมินภาวะน้ำหนักตัว เหมาะสำหรับทุกเพศทุกวัย<br>กรอกข้อมูลเพื่อคำนวณพลังงานที่ใช้และค่ากายภาพบำบัด</div>
+        <section>
+            <h2 style="color:#1976d2;">คำนวณค่ากายภาพบำบัด</h2>
+            <form id="physioForm">
+                <label>⚖️ น้ำหนักตัว (กก.): <input type="number" id="weight" required></label><br><br>
+                <label>🎂 อายุ (ปี): <input type="number" id="age" required></label><br><br>
+                <label>⏱️ ระยะเวลาทำกิจกรรม (นาที): <input type="number" id="minutes" required></label><br><br>
+                <label>🏃‍♂️ ประเภทกิจกรรม:
+                    <select id="activity">
+                        <option value="3.5">เดินช้า (3.5 METs)</option>
+                        <option value="5">เดินเร็ว (5 METs)</option>
+                        <option value="7">วิ่งเบา (7 METs)</option>
+                        <option value="8">ปั่นจักรยาน (8 METs)</option>
+                        <option value="10">ว่ายน้ำ (10 METs)</option>
+                    </select>
+                </label><br><br>
+                <label>💪 ความหนักของกิจกรรม:
+                    <select id="intensity">
+                        <option value="0.5">เบา (50%)</option>
+                        <option value="0.7">ปานกลาง (70%)</option>
+                        <option value="0.85">หนัก (85%)</option>
+                    </select>
+                </label><br><br>
+                <button type="button" onclick="calculatePhysio()">คำนวณ</button>
+            </form>
+            <div id="result" style="margin-top:24px;"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 PHYSIO CALCULATOR</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
